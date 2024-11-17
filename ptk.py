@@ -3,7 +3,7 @@ from g4f.client import Client
 
 client =Client()#初始化gpt服务
 
-def text_generation(model="gpt-3.5-turbo",messages=[],temperature=0.7):
+def text_generation(model="gpt-4o-mini",messages=[],temperature=0.7):
     completion = client.chat.completions.create(model=model,messages=messages,temperature=temperature,)
     return completion.choices[0].message.content
 
